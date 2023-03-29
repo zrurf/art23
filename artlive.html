@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <title>师大附中呈贡第七届艺术节直播</title>
+        <link rel="stylesheet" type="text/css" href="res/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="res/thirdparty/tcplayer.min.css">
+    </head>
+    <script src="res/thirdparty/libs/hls.min.0.13.2m.js"></script>
+    <script src="res/thirdparty/libs/flv.min.1.6.2.js"></script>
+    <script src="res/thirdparty/tcplayer.v4.5.2.min.js"></script>
+    <body>
+        <div id="main">
+            <div id="title">师大附中呈贡第七届艺术节直播</div>
+            <div id="player">
+                <video id="player_v" preload="meta" playsinline webkit-playsinline></video>
+            </div>
+            <div style="padding: 20px;"></div>
+        </div>
+    </body>
+    <script>
+        let player = TCPlayer('player_v', {
+            live: true,
+            controlBar: {
+                playToggle: true,
+                progressControl: false,
+                playbackRateMenuButton: false,
+                QualitySwitcherMenuButton: false
+            },
+            sources: [
+                "http://cn-zj1-a81dj1kk.frp.cool:18885/live/art23.flv",
+                "http://cn-ln1-jd83jacx.frp.cool:18375/live/art23.flv",
+                "http://cn-zj1-a81dj1kk.frp.cool:13508/live/art23.flv",
+                "http://cn-zj1-a81dj1kk.frp.cool:17760/live/art23.flv",
+                "http://cn-zj1-a81dj1kk.frp.cool:16868/live/art23.flv",
+                "http://cn-zj1-a81dj1kk.frp.cool:16365/live/art23.flv",
+                "http://cn-zj1-a81dj1kk.frp.cool:10033/live/art23.flv",
+                "http://cn-zj1-a81dj1kk.frp.cool:11677/live/art23.flv",
+                "http://cn-zj1-a81dj1kk.frp.cool/live/art23.m3u8"
+            ]
+
+        });
+    </script>
+</html>
